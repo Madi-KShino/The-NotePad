@@ -16,6 +16,8 @@
 		53E67B6C22EA133D006DA3AF /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E67B6B22EA133D006DA3AF /* Note.swift */; };
 		53E67B6E22EA1346006DA3AF /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E67B6D22EA1346006DA3AF /* NoteController.swift */; };
 		53E67B7022EA2C6A006DA3AF /* LocationPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E67B6F22EA2C6A006DA3AF /* LocationPopupViewController.swift */; };
+		53E67B7222EA4080006DA3AF /* Hotine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E67B7122EA4080006DA3AF /* Hotine.swift */; };
+		53E67B7422EA5633006DA3AF /* HotlineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E67B7322EA5633006DA3AF /* HotlineController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		53E67B6B22EA133D006DA3AF /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		53E67B6D22EA1346006DA3AF /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
 		53E67B6F22EA2C6A006DA3AF /* LocationPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPopupViewController.swift; sourceTree = "<group>"; };
+		53E67B7122EA4080006DA3AF /* Hotine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotine.swift; sourceTree = "<group>"; };
+		53E67B7322EA5633006DA3AF /* HotlineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotlineController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			children = (
 				53E67B6922EA12E8006DA3AF /* UserController.swift */,
 				53E67B6D22EA1346006DA3AF /* NoteController.swift */,
+				53E67B7322EA5633006DA3AF /* HotlineController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 			children = (
 				53E67B6722EA12DE006DA3AF /* User.swift */,
 				53E67B6B22EA133D006DA3AF /* Note.swift */,
+				53E67B7122EA4080006DA3AF /* Hotine.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,9 +226,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				53E67B7022EA2C6A006DA3AF /* LocationPopupViewController.swift in Sources */,
+				53E67B7422EA5633006DA3AF /* HotlineController.swift in Sources */,
 				53E67B6A22EA12E8006DA3AF /* UserController.swift in Sources */,
 				53E67B6822EA12DE006DA3AF /* User.swift in Sources */,
 				537B9A1822E6C06E002FF393 /* AppDelegate.swift in Sources */,
+				53E67B7222EA4080006DA3AF /* Hotine.swift in Sources */,
 				53E67B6C22EA133D006DA3AF /* Note.swift in Sources */,
 				53E67B6E22EA1346006DA3AF /* NoteController.swift in Sources */,
 			);
