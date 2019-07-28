@@ -6,4 +6,20 @@
 //  Copyright © 2019 Madi S. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class NoteController {
+    
+    //Singleton
+    static let sharedInstance = NoteController()
+    
+    //Source of Truth
+    var notes: [Note] = []
+    
+    //Create New Note
+    
+    //Update Existing Note
+    
+    //Delte Note
+    
+}

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530AE23A22ED071A000A7B1C /* HotlineListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530AE23922ED071A000A7B1C /* HotlineListTableViewController.swift */; };
 		537B9A1822E6C06E002FF393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B9A1722E6C06E002FF393 /* AppDelegate.swift */; };
 		537B9A1D22E6C06E002FF393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537B9A1B22E6C06E002FF393 /* Main.storyboard */; };
 		537B9A1F22E6C06F002FF393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537B9A1E22E6C06F002FF393 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		4810975F49F335030822E3AC /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
+		530AE23922ED071A000A7B1C /* HotlineListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotlineListTableViewController.swift; sourceTree = "<group>"; };
 		537B9A1422E6C06E002FF393 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537B9A1722E6C06E002FF393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		537B9A1C22E6C06E002FF393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		537B9A2B22E6C1A7002FF393 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				530AE23922ED071A000A7B1C /* HotlineListTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -173,7 +176,6 @@
 				92495763BE732032109CA624 /* Pods-Today.debug.xcconfig */,
 				4810975F49F335030822E3AC /* Pods-Today.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -302,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53E67B7622EB7734006DA3AF /* FirebaseController.swift in Sources */,
+				530AE23A22ED071A000A7B1C /* HotlineListTableViewController.swift in Sources */,
 				53E67B7022EA2C6A006DA3AF /* LocationPopupViewController.swift in Sources */,
 				53E67B7422EA5633006DA3AF /* HotlineController.swift in Sources */,
 				53E67B6A22EA12E8006DA3AF /* UserController.swift in Sources */,

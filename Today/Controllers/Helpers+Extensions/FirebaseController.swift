@@ -8,7 +8,6 @@
 
 import Foundation
 import Firebase
-//AIzaSyAx2olnInuFdN_lAjD8CjSIwGbeknHe1Ww
 
 class FirebaseController {
     
@@ -19,7 +18,7 @@ class FirebaseController {
     var currentUser = Auth.auth().currentUser
     
     //Reference to Storage
-    let storage = Storage.storage().reference()
+    let storageReference = Storage.storage().reference()
     
     //Database URL (RT Database)
     let database = Database.database().reference(fromURL: "https://today-1564166996749.firebaseio.com/")
@@ -48,8 +47,27 @@ class FirebaseController {
         }
     }
     
+    //Fetch Array of Dictionaries from Database (for User Data when retrieving an existing user)
+    func fetchDictionary(type: String, uuid: String?, completion: @escaping ([[String : Any]]) -> Void) {
+        if uuid != nil {
+            //Fetch Object at Provided Path
+            database.child(type).child(uuid!).observeSingleEvent(of: .value) { (dataSnapshot) in
+                guard let dictionary = dataSnapshot.value as? [String : Any] else { return }
+                completion([dictionary])
+                return
+            }
+        } else {
+            var foundDictionaries: [[String : Any]] = [[:]]
+            database.child(type).observe(.childAdded) { (dataSnapshot) in
+                guard let dictionary = dataSnapshot.value as? [String : Any] else { return }
+                foundDictionaries.append(dictionary)
+            }
+            completion(foundDictionaries)
+        }
+    }
+    
     //Create - Save New Object (as a UUID String) to Database
-    func saveToDatabase(object: String, type: String, withDictionary dictionary: [String : Any], completion: @escaping (Bool) -> Void) {
+    func saveObjectToDatabase(object: String, type: String, withDictionary dictionary: [String : Any], completion: @escaping (Bool) -> Void) {
         //Url Path for Object to Save
         let reference = database.child(type).child(object)
         //Save the Dictionary for the Object
@@ -64,5 +82,71 @@ class FirebaseController {
         }
     }
     
+    //Update Object in Database
+    func updateObjectOf(type: String, uuid: String, dictionary: [String : Any], completion: @escaping (Bool) -> Void) {
+        database.child(type).child(uuid).updateChildValues(dictionary) { (error, reference) in
+            if let error = error {
+                print("Error in \(#function): \(error.localizedDescription) /n---/n \(error)")
+                completion(false)
+                return
+            }
+            print("Successfully Updated Object Dictionary in Database")
+            completion(true)
+        }
+    }
     
+    //Delete Object from Database
+    func deleteObjectWith(uuid: String, type: String, completion: @escaping (Bool) -> Void) {
+        database.child(type).child(uuid).removeValue { (error, reference) in
+            if let error = error {
+                print("Error in \(#function): \(error.localizedDescription) /n---/n \(error)")
+                completion(false)
+                return
+            }
+            print("Object Deleted Successfully")
+            completion(true)
+        }
+    }
+    
+    //Save Image Data as URL to Database
+    func uploadImage(type: String, uuid: String, data: Data, completion: @escaping (String?) -> Void) {
+        //Reference to Storage
+        let imageStoreReference = storageReference.child(type).child(uuid)
+        //Put Data in the Storage Reference
+        imageStoreReference.putData(data, metadata: nil) { (imageData, error) in
+            if let error = error {
+                print("Error in \(#function): \(error.localizedDescription) /n---/n \(error)")
+                completion(nil)
+                return
+            }
+            //Get URL String from the Data
+            imageStoreReference.downloadURL(completion: { (url, error) in
+                if let error = error {
+                    print("Error in \(#function): \(error.localizedDescription) /n---/n \(error)")
+                    completion(nil)
+                    return
+                }
+                if let url = url?.absoluteString {
+                    completion(url)
+                }
+            })
+        }
+    }
+    
+    //Retrieve Image from URL String in Database
+    func fetchImageFrom(url: String) -> UIImage? {
+        var image: UIImage?
+        do {
+            guard let imageUrl = URL(string: url) else { return nil }
+            let imageData = try Data(contentsOf: imageUrl)
+            image = UIImage(data: imageData)
+        } catch {
+            print("Error Setting an Image from the Inage URL")
+        }
+        return image
+    }
+    
+    //Save Audio Data as URL to Database
+    
+    //Retrieve Audio fron URL in Database
 }
