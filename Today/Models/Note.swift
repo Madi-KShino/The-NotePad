@@ -13,11 +13,11 @@ import AVFoundation
 class Note {
     
     var timeStamp: Date
-    var noteText: String
-    var photo: UIImage
-    var audio: AVAudioFile
+    var noteText: String?
+    var photo: UIImage?
+    var audio: AVAudioFile?
     
-    init(timeStamp: Date = Date(), noteText: String, photo: UIImage, audio: AVAudioFile) {
+    init(timeStamp: Date = Date(), noteText: String?, photo: UIImage?, audio: AVAudioFile?) {
         self.timeStamp = timeStamp
         self.noteText = noteText
         self.photo = photo

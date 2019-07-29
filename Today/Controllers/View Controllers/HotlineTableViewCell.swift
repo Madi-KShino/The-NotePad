@@ -43,7 +43,7 @@ class HotlineTableViewCell: UITableViewCell {
             textNumberLabel.isHidden = true
         } else {
             textNumberLabel.isHidden = false
-            textNumberLabel.text = "Text: \(hotline.textNumber!)"
+            textNumberLabel.text = hotline.textNumber
         }
         if hotline.website == nil {
             websiteLabel.isHidden = true

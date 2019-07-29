@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import AVFoundation
 
 class NoteController {
     
@@ -17,9 +19,10 @@ class NoteController {
     var notes: [Note] = []
     
     //Create New Note
+    func createNoteWith(text: String?, photo: UIImage?, audio: )
     
     //Update Existing Note
     
-    //Delte Note
+    //Delete Note
     
 }

@@ -14,6 +14,7 @@
 		537B9A1D22E6C06E002FF393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537B9A1B22E6C06E002FF393 /* Main.storyboard */; };
 		537B9A1F22E6C06F002FF393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537B9A1E22E6C06F002FF393 /* Assets.xcassets */; };
 		537B9A2222E6C06F002FF393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537B9A2022E6C06F002FF393 /* LaunchScreen.storyboard */; };
+		53AB0F2B22EF6AEB00947AB1 /* RecordAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB0F2A22EF6AEB00947AB1 /* RecordAudioViewController.swift */; };
 		53E67B6822EA12DE006DA3AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E67B6722EA12DE006DA3AF /* User.swift */; };
 		53E67B6A22EA12E8006DA3AF /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E67B6922EA12E8006DA3AF /* UserController.swift */; };
 		53E67B6C22EA133D006DA3AF /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E67B6B22EA133D006DA3AF /* Note.swift */; };
@@ -37,6 +38,7 @@
 		537B9A1E22E6C06F002FF393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		537B9A2122E6C06F002FF393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		537B9A2322E6C06F002FF393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53AB0F2A22EF6AEB00947AB1 /* RecordAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAudioViewController.swift; sourceTree = "<group>"; };
 		53E67B6722EA12DE006DA3AF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		53E67B6922EA12E8006DA3AF /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		53E67B6B22EA133D006DA3AF /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				530AE23922ED071A000A7B1C /* HotlineListTableViewController.swift */,
 				530AE23B22EDFB4F000A7B1C /* HotlineTableViewCell.swift */,
 				530AE23D22EE3545000A7B1C /* LocationsViewController.swift */,
+				53AB0F2A22EF6AEB00947AB1 /* RecordAudioViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				530AE23C22EDFB4F000A7B1C /* HotlineTableViewCell.swift in Sources */,
 				530AE23A22ED071A000A7B1C /* HotlineListTableViewController.swift in Sources */,
 				53E67B7022EA2C6A006DA3AF /* LocationPopupViewController.swift in Sources */,
+				53AB0F2B22EF6AEB00947AB1 /* RecordAudioViewController.swift in Sources */,
 				53E67B7422EA5633006DA3AF /* HotlineController.swift in Sources */,
 				53E67B6A22EA12E8006DA3AF /* UserController.swift in Sources */,
 				53E67B6822EA12DE006DA3AF /* User.swift in Sources */,

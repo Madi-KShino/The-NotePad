@@ -139,43 +139,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdA-o3-7Hr">
-                                <rect key="frame" x="180" y="140" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Camera"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvz-9v-faP">
-                                <rect key="frame" x="166" y="195" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Microphone"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQZ-78-oLF">
-                                <rect key="frame" x="176" y="249" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Note Pad"/>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u05-Lr-Oc2">
-                                <rect key="frame" x="103.5" y="315" width="207" height="276"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="E36-ae-eZf">
+                                <rect key="frame" x="145" y="293.5" width="124" height="138"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdA-o3-7Hr">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="30"/>
+                                        <state key="normal" title="Camera"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvz-9v-faP">
+                                        <rect key="frame" x="0.0" y="54" width="124" height="30"/>
+                                        <state key="normal" title="Microphone"/>
+                                        <connections>
+                                            <segue destination="80a-dj-ceR" kind="show" id="WSG-0h-ZZW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQZ-78-oLF">
+                                        <rect key="frame" x="0.0" y="108" width="124" height="30"/>
+                                        <state key="normal" title="Note Pad"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qKa-Z7-YMx">
+                                <rect key="frame" x="103.5" y="575" width="207" height="118"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u05-Lr-Oc2">
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="u05-Lr-Oc2" secondAttribute="height" id="74p-S6-1jG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dIW-6E-6rk">
+                                        <rect key="frame" x="123" y="0.0" width="84" height="118"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paz-Td-G3A">
+                                                <rect key="frame" x="0.0" y="0.0" width="84" height="56.5"/>
+                                                <state key="normal" title="Recordings"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCd-vh-GBf">
+                                                <rect key="frame" x="0.0" y="61.5" width="84" height="56.5"/>
+                                                <state key="normal" title="Notes"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="u05-Lr-Oc2" secondAttribute="height" multiplier="3:4" id="74p-S6-1jG"/>
+                                    <constraint firstAttribute="bottom" secondItem="dIW-6E-6rk" secondAttribute="bottom" id="1Ka-zO-4Uf"/>
+                                    <constraint firstItem="dIW-6E-6rk" firstAttribute="top" secondItem="qKa-Z7-YMx" secondAttribute="top" id="MBb-rq-StL"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paz-Td-G3A">
-                                <rect key="frame" x="184" y="614" width="46" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Recordings"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCd-vh-GBf">
-                                <rect key="frame" x="184" y="682" width="46" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Notes"/>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="u05-Lr-Oc2" firstAttribute="width" secondItem="uHL-F6-b3i" secondAttribute="width" multiplier="0.5" id="76f-35-txt"/>
-                            <constraint firstItem="u05-Lr-Oc2" firstAttribute="centerY" secondItem="NlT-j7-EfW" secondAttribute="centerY" id="XiF-Vx-DFy"/>
-                            <constraint firstItem="u05-Lr-Oc2" firstAttribute="centerX" secondItem="uHL-F6-b3i" secondAttribute="centerX" id="baC-qT-xiQ"/>
+                            <constraint firstItem="qKa-Z7-YMx" firstAttribute="centerY" secondItem="NlT-j7-EfW" secondAttribute="centerY" multiplier="1.4" id="0go-Tk-MEV"/>
+                            <constraint firstItem="qKa-Z7-YMx" firstAttribute="width" secondItem="uHL-F6-b3i" secondAttribute="width" multiplier="0.5" id="9yo-s9-L1c"/>
+                            <constraint firstItem="qKa-Z7-YMx" firstAttribute="centerX" secondItem="uHL-F6-b3i" secondAttribute="centerX" id="YBA-rB-ZMR"/>
+                            <constraint firstItem="E36-ae-eZf" firstAttribute="centerX" secondItem="uHL-F6-b3i" secondAttribute="centerX" id="hTW-u4-rfj"/>
+                            <constraint firstItem="E36-ae-eZf" firstAttribute="centerY" secondItem="NlT-j7-EfW" secondAttribute="centerY" multiplier="0.8" id="jyX-KF-flU"/>
+                            <constraint firstItem="E36-ae-eZf" firstAttribute="width" secondItem="uHL-F6-b3i" secondAttribute="width" multiplier="0.3" id="wQP-iO-kg9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NlT-j7-EfW"/>
                     </view>
@@ -183,6 +203,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iC-Wy-uTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2503" y="-625"/>
+        </scene>
+        <!--Record Audio View Controller-->
+        <scene sceneID="i34-KZ-KR6">
+            <objects>
+                <viewController id="80a-dj-ceR" customClass="RecordAudioViewController" customModule="Today" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Dm-dW-09i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtp-Bh-t9d">
+                                <rect key="frame" x="183" y="433" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Record"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNr-fw-umY">
+                                <rect key="frame" x="192" y="471" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="e9Y-Ab-ya3"/>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="lNr-fw-umY" id="1Tc-Dt-kLj"/>
+                        <outlet property="recordingButton" destination="dtp-Bh-t9d" id="qsk-hX-svN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMP-Mj-b57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3299" y="-625"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NOh-IT-fET">

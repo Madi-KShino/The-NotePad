@@ -46,7 +46,7 @@ class UserController {
         guard let uuid = user.uuid else { return }
         FirebaseController.sharedInstance.updateObjectOf(type: UserConstants.userTypeKey, uuid: uuid, dictionary: user.dictionary) { (success) in
             if success {
-                //Handle
+                //Not Finished
             }
         }
     }
@@ -56,7 +56,7 @@ class UserController {
         guard let uuid = user.uuid else { return }
         FirebaseController.sharedInstance.deleteObjectWith(uuid: uuid, type: UserConstants.userTypeKey) { (success) in
             if success {
-                //Handle
+                //Not Finished
             }
         }
     }
