@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		530AE23A22ED071A000A7B1C /* HotlineListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530AE23922ED071A000A7B1C /* HotlineListTableViewController.swift */; };
+		530AE23C22EDFB4F000A7B1C /* HotlineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530AE23B22EDFB4F000A7B1C /* HotlineTableViewCell.swift */; };
+		530AE23E22EE3545000A7B1C /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530AE23D22EE3545000A7B1C /* LocationsViewController.swift */; };
 		537B9A1822E6C06E002FF393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B9A1722E6C06E002FF393 /* AppDelegate.swift */; };
 		537B9A1D22E6C06E002FF393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537B9A1B22E6C06E002FF393 /* Main.storyboard */; };
 		537B9A1F22E6C06F002FF393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537B9A1E22E6C06F002FF393 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		4810975F49F335030822E3AC /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
 		530AE23922ED071A000A7B1C /* HotlineListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotlineListTableViewController.swift; sourceTree = "<group>"; };
+		530AE23B22EDFB4F000A7B1C /* HotlineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotlineTableViewCell.swift; sourceTree = "<group>"; };
+		530AE23D22EE3545000A7B1C /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		537B9A1422E6C06E002FF393 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537B9A1722E6C06E002FF393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		537B9A1C22E6C06E002FF393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				530AE23922ED071A000A7B1C /* HotlineListTableViewController.swift */,
+				530AE23B22EDFB4F000A7B1C /* HotlineTableViewCell.swift */,
+				530AE23D22EE3545000A7B1C /* LocationsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53E67B7622EB7734006DA3AF /* FirebaseController.swift in Sources */,
+				530AE23C22EDFB4F000A7B1C /* HotlineTableViewCell.swift in Sources */,
 				530AE23A22ED071A000A7B1C /* HotlineListTableViewController.swift in Sources */,
 				53E67B7022EA2C6A006DA3AF /* LocationPopupViewController.swift in Sources */,
 				53E67B7422EA5633006DA3AF /* HotlineController.swift in Sources */,
@@ -313,6 +320,7 @@
 				53E67B7222EA4080006DA3AF /* Hotine.swift in Sources */,
 				53E67B6C22EA133D006DA3AF /* Note.swift in Sources */,
 				53E67B6E22EA1346006DA3AF /* NoteController.swift in Sources */,
+				530AE23E22EE3545000A7B1C /* LocationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

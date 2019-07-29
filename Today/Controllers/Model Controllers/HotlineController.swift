@@ -14,6 +14,9 @@ class HotlineController {
     //Singleton
     static let sharedInstance = HotlineController()
     
+    //Source of Truth
+    var categories: [[Hotline]] = []
+    
     //Hotline Categories
     var abuseHotlines: [Hotline] = []
     var suicideHotlines: [Hotline] = []
@@ -38,10 +41,15 @@ class HotlineController {
     let teenDatingHL = Hotline(name: "Love is Respect - National Teen Dating Abuse Hotline", number: "1-866-331-9474", textNumber: "TEXT: LOVEIS to 22522", website: "https://www.loveisrespect.org/")
 
     //Add Hotlines to Categories
-    func loadHotlineData(completion: @escaping (Bool) -> Void) {
+    func loadHotlineData() {
         abuseHotlines = [domesticAbuseHL, rainnHL, childhelpHL]
         suicideHotlines = [suicideHL, safeHL]
         lgbtqHotlines = [lgbtqHL, youthHL, seniorHL]
         otherHotlines = [womensLawHL, traffickingHL, runawayHL, teenDatingHL]
+        
+        self.categories = [abuseHotlines,
+         suicideHotlines,
+         lgbtqHotlines,
+         otherHotlines ]
     }
 }

@@ -9,46 +9,54 @@
 import UIKit
 
 class HotlineListTableViewController: UITableViewController {
-
-    var sections: [[Hotline]] = []
+    
+    var titles = ["Abuse",
+                  "Suicide/Self Harm",
+                  "LGBTQ",
+                  "Other"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        HotlineController.sharedInstance.loadHotlineData { (success) in
-            if success {
-                self.sections = [HotlineController.sharedInstance.abuseHotlines,
-                                 HotlineController.sharedInstance.suicideHotlines,
-                                 HotlineController.sharedInstance.lgbtqHotlines,
-                                 HotlineController.sharedInstance.otherHotlines ]
-                self.tableView.reloadData()
-            } else { return }
-        }
+        HotlineController.sharedInstance.loadHotlineData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
 
     //Table View Data
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        return HotlineController.sharedInstance.categories.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].count
+        return HotlineController.sharedInstance.categories[section].count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return ""
+        switch section {
+        case 0:
+            return titles[0]
+        case 1:
+            return titles[1]
+        case 2:
+            return titles[2]
+        case 3:
+            return titles[3]
+        default:
+            return ""
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "hotlineCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "hotlineCell", for: indexPath) as? HotlineTableViewCell else { return UITableViewCell() }
 
+        let sections = HotlineController.sharedInstance.categories
         let helplinesToDisplay = sections[indexPath.section][indexPath.row]
-        cell.textLabel?.text = helplinesToDisplay.name
+        cell.hotline = helplinesToDisplay
+        cell.updateViews()
         
-
         return cell
     }
 
@@ -61,5 +69,7 @@ class HotlineListTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //Pop off VC
 
 }
