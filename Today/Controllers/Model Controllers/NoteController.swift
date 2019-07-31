@@ -19,7 +19,7 @@ class NoteController {
     var notes: [Note] = []
     
     //Create New Note
-    func createNoteWith(text: String?, photo: UIImage?, audio: )
+//    func createNoteWith(text: String?, photo: UIImage?, audio: )
     
     //Update Existing Note
     

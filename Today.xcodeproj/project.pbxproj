@@ -10,6 +10,8 @@
 		530AE23A22ED071A000A7B1C /* HotlineListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530AE23922ED071A000A7B1C /* HotlineListTableViewController.swift */; };
 		530AE23C22EDFB4F000A7B1C /* HotlineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530AE23B22EDFB4F000A7B1C /* HotlineTableViewCell.swift */; };
 		530AE23E22EE3545000A7B1C /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530AE23D22EE3545000A7B1C /* LocationsViewController.swift */; };
+		5313C04022F1F0C500BD2039 /* RecordingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5313C03F22F1F0C500BD2039 /* RecordingListViewController.swift */; };
+		5313C04222F1F0D100BD2039 /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5313C04122F1F0D100BD2039 /* RecorderViewController.swift */; };
 		537B9A1822E6C06E002FF393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B9A1722E6C06E002FF393 /* AppDelegate.swift */; };
 		537B9A1D22E6C06E002FF393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537B9A1B22E6C06E002FF393 /* Main.storyboard */; };
 		537B9A1F22E6C06F002FF393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537B9A1E22E6C06F002FF393 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		530AE23922ED071A000A7B1C /* HotlineListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotlineListTableViewController.swift; sourceTree = "<group>"; };
 		530AE23B22EDFB4F000A7B1C /* HotlineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotlineTableViewCell.swift; sourceTree = "<group>"; };
 		530AE23D22EE3545000A7B1C /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		5313C03F22F1F0C500BD2039 /* RecordingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingListViewController.swift; sourceTree = "<group>"; };
+		5313C04122F1F0D100BD2039 /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
 		537B9A1422E6C06E002FF393 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537B9A1722E6C06E002FF393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		537B9A1C22E6C06E002FF393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				530AE23B22EDFB4F000A7B1C /* HotlineTableViewCell.swift */,
 				530AE23D22EE3545000A7B1C /* LocationsViewController.swift */,
 				53AB0F2A22EF6AEB00947AB1 /* RecordAudioViewController.swift */,
+				5313C03F22F1F0C500BD2039 /* RecordingListViewController.swift */,
+				5313C04122F1F0D100BD2039 /* RecorderViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			files = (
 				53E67B7622EB7734006DA3AF /* FirebaseController.swift in Sources */,
 				530AE23C22EDFB4F000A7B1C /* HotlineTableViewCell.swift in Sources */,
+				5313C04022F1F0C500BD2039 /* RecordingListViewController.swift in Sources */,
 				530AE23A22ED071A000A7B1C /* HotlineListTableViewController.swift in Sources */,
 				53E67B7022EA2C6A006DA3AF /* LocationPopupViewController.swift in Sources */,
 				53AB0F2B22EF6AEB00947AB1 /* RecordAudioViewController.swift in Sources */,
@@ -323,6 +330,7 @@
 				537B9A1822E6C06E002FF393 /* AppDelegate.swift in Sources */,
 				53E67B7222EA4080006DA3AF /* Hotine.swift in Sources */,
 				53E67B6C22EA133D006DA3AF /* Note.swift in Sources */,
+				5313C04222F1F0D100BD2039 /* RecorderViewController.swift in Sources */,
 				53E67B6E22EA1346006DA3AF /* NoteController.swift in Sources */,
 				530AE23E22EE3545000A7B1C /* LocationsViewController.swift in Sources */,
 			);

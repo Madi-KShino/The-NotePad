@@ -10,69 +10,83 @@ import UIKit
 import AVFoundation
 
 class RecordAudioViewController: UIViewController {
-
+    
     //Properties
-    
+    var recordingsViewController: RecordingListViewController? {
+        get {
+            return children.compactMap({$0 as? RecordingListViewController}).first
+        }
+    }
+    var recorderViewController: RecorderViewController? {
+        get {
+            return children.compactMap({$0 as? RecorderViewController}).first
+        }
+    }
+
     //Outlets
-    @IBOutlet weak var recordingButton: UIButton!
-    @IBOutlet weak var playButton: UIButton!
+    //Container Views
+    @IBOutlet weak var recordingListView: UIView!
+    @IBOutlet weak var recorderView: UIView!
     
-    var recordingSession: AVAudioSession!
-    var audioRecorder: AVAudioRecorder!
-    var audioPlayer: AVAudioPlayer!
-    
+    //Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-        // Do any additional setup after loading the view.
     }
-    
-    func setUpView() {
-        recordingSession = AVAudioSession.sharedInstance()
-        do {
-            try recordingSession.setCategory(.playAndRecord, mode: .default)
-            try recordingSession.setActive(true)
-            recordingSession.requestRecordPermission() { [unowned self] allowed in
-                DispatchQueue.main.async {
-                    if allowed {
-                        self.buttonViewWhenRecording()
-                    } else {
-                        //If failed
-                        return
-                    }
-                }
-            }
-        } catch {
-            //Failed
+}
+
+extension RecordAudioViewController: RecorderViewControllerDelegate {
+    func didStartRecording() {
+        if let recordings = self.recordingsViewController {
+            recordings.fadeView.isHidden = false
+            UIView.animate(withDuration: 0.5, animations: {
+                recordings.fadeView.alpha = 1
+            })
         }
     }
     
-    func buttonViewWhenRecording() {
-        recordingButton.isEnabled = true
-        recordingButton.setTitle("Tap to Record", for: .normal)
-        recordingButton.addTarget(self, action: #selector(recordButtonTapped), for: .touchUpInside)
-        playButton.isEnabled = false
-        view.addSubview(recordingButton)
+    func didAddRecording() {
+        if let recording = self.recordingsViewController {
+            recording.loadView()
+        }
     }
     
-    @objc func recordButtonTapped() {
-        
+    func didFinishRecording() {
+        if let recordings = self.recordingsViewController {
+            recordings.view.isUserInteractionEnabled = true
+            UIView.animate(withDuration: 0.5, animations: {
+                recordings.fadeView.alpha = 0
+            }, completion: { (finished) in
+                if finished {
+                    recordings.fadeView.isHidden = true
+                    DispatchQueue.main.async {
+                        recordings.loadRecordings()
+                    }
+                }
+            })
+        }
     }
-    
-    func beginRecording() {
-    }
-    
-    func 
-    
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension RecordAudioViewController: RecordingsViewControllerDelegate {
+    func didStartPlayback() {
+        if let recorder = self.recordingsViewController {
+            recorder.fadeView.isHidden = false
+            UIView.animate(withDuration: 0.5, animations: {
+                recorder.fadeView.alpha = 1
+            })
+        }
     }
-    */
-
+    
+    func didFinishPlayback() {
+        if let recorder = self.recordingsViewController {
+            recorder.view.isUserInteractionEnabled = true
+            UIView.animate(withDuration: 0.5, animations: {
+                recorder.fadeView.alpha = 0
+            }, completion: { (finished) in
+                if finished {
+                    recorder.fadeView.isHidden = false
+                }
+            })
+        }
+    }
 }
