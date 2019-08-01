@@ -12,6 +12,8 @@
 		530AE23E22EE3545000A7B1C /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530AE23D22EE3545000A7B1C /* LocationsViewController.swift */; };
 		5313C04022F1F0C500BD2039 /* RecordingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5313C03F22F1F0C500BD2039 /* RecordingListViewController.swift */; };
 		5313C04222F1F0D100BD2039 /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5313C04122F1F0D100BD2039 /* RecorderViewController.swift */; };
+		533F5CE022F25FA200275DCE /* PhotoSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533F5CDF22F25FA200275DCE /* PhotoSelectorViewController.swift */; };
+		533F5CE222F2621F00275DCE /* AddTodaysNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533F5CE122F2621F00275DCE /* AddTodaysNoteViewController.swift */; };
 		537B9A1822E6C06E002FF393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B9A1722E6C06E002FF393 /* AppDelegate.swift */; };
 		537B9A1D22E6C06E002FF393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537B9A1B22E6C06E002FF393 /* Main.storyboard */; };
 		537B9A1F22E6C06F002FF393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537B9A1E22E6C06F002FF393 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		530AE23D22EE3545000A7B1C /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		5313C03F22F1F0C500BD2039 /* RecordingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingListViewController.swift; sourceTree = "<group>"; };
 		5313C04122F1F0D100BD2039 /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
+		533F5CDF22F25FA200275DCE /* PhotoSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorViewController.swift; sourceTree = "<group>"; };
+		533F5CE122F2621F00275DCE /* AddTodaysNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodaysNoteViewController.swift; sourceTree = "<group>"; };
 		537B9A1422E6C06E002FF393 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537B9A1722E6C06E002FF393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		537B9A1C22E6C06E002FF393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				53AB0F2A22EF6AEB00947AB1 /* RecordAudioViewController.swift */,
 				5313C03F22F1F0C500BD2039 /* RecordingListViewController.swift */,
 				5313C04122F1F0D100BD2039 /* RecorderViewController.swift */,
+				533F5CDF22F25FA200275DCE /* PhotoSelectorViewController.swift */,
+				533F5CE122F2621F00275DCE /* AddTodaysNoteViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -320,10 +326,12 @@
 			files = (
 				53E67B7622EB7734006DA3AF /* FirebaseController.swift in Sources */,
 				530AE23C22EDFB4F000A7B1C /* HotlineTableViewCell.swift in Sources */,
+				533F5CE022F25FA200275DCE /* PhotoSelectorViewController.swift in Sources */,
 				5313C04022F1F0C500BD2039 /* RecordingListViewController.swift in Sources */,
 				530AE23A22ED071A000A7B1C /* HotlineListTableViewController.swift in Sources */,
 				53E67B7022EA2C6A006DA3AF /* LocationPopupViewController.swift in Sources */,
 				53AB0F2B22EF6AEB00947AB1 /* RecordAudioViewController.swift in Sources */,
+				533F5CE222F2621F00275DCE /* AddTodaysNoteViewController.swift in Sources */,
 				53E67B7422EA5633006DA3AF /* HotlineController.swift in Sources */,
 				53E67B6A22EA12E8006DA3AF /* UserController.swift in Sources */,
 				53E67B6822EA12DE006DA3AF /* User.swift in Sources */,
