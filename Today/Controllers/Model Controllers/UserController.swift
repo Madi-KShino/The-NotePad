@@ -39,10 +39,9 @@ class UserController {
     }
     
     //Update User
-    func update(user: User, email: String, firstName: String, lastName: String?) {
+    func update(user: User, email: String, firstName: String) {
         user.email = email
         user.firstName = firstName
-        user.lastName = lastName
         guard let uuid = user.uuid else { return }
         FirebaseController.sharedInstance.updateObjectOf(type: UserConstants.userTypeKey, uuid: uuid, dictionary: user.dictionary) { (success) in
             if success {

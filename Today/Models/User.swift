@@ -14,17 +14,13 @@ class User {
     //Class Properties
     var email: String
     var firstName: String
-    var lastName: String?
-    
     //Firebase Properties
     var uuid: String?
     var dictionary: [String : Any] {
         return [
             UserConstants.emailKey : self.email,
             UserConstants.firstNameKey : self.firstName,
-            UserConstants.lastNameKey : self.lastName ?? "",
-            UserConstants.uuidKey : self.uuid!
-        ]
+            UserConstants.uuidKey : self.uuid!]
     }
     
     //Designated/Memberwise Initializer
@@ -56,6 +52,5 @@ struct UserConstants {
     static let userTypeKey = "User"
     fileprivate static let emailKey = "email"
     fileprivate static let firstNameKey = "firstName"
-    fileprivate static let lastNameKey = "lastName"
     fileprivate static let uuidKey = "uuid"
 }

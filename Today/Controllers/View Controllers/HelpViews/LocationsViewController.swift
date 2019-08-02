@@ -11,7 +11,6 @@ import MapKit
 
 class LocationsViewController: UIViewController{
 
-
     //Outlets
     @IBOutlet weak var selectLocationButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
@@ -23,18 +22,6 @@ class LocationsViewController: UIViewController{
         locationListTableView.delegate = self
         locationListTableView.dataSource = self
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {

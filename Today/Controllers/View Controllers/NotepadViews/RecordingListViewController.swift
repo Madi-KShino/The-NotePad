@@ -51,7 +51,7 @@ class RecordingListViewController: UIViewController {
     
     //Retrieve Recordings from their URL
     func loadRecordings() {
-        self.recordings.removeAll()
+        recordings.removeAll()
         let fileManager = FileManager.default
         let directory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         do {

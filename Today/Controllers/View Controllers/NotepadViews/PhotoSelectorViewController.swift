@@ -43,12 +43,11 @@ extension PhotoSelectorViewController: UIImagePickerControllerDelegate, UINaviga
             selectedImageView.image = photos.first?.photo
             delegate?.photoSelectorViewControllerSelected(image: photo)
             cameraButton.setTitle("", for: .normal)
-            switch photos.count {
-            case 0:
+            if photos.count == 0 {
                 imageCountLabel.isHidden = true
-            case 1:
+            } else if photos.count == 1 {
                 imageCountLabel.text = "+"
-            default:
+            } else if photos.count >= 2 {
                 imageCountLabel.text = "+ \(photos.count - 1)"
             }
         }
