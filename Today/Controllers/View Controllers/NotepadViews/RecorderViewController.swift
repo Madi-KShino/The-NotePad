@@ -264,6 +264,8 @@ class RecorderViewController: UIViewController {
         let urlPath = self.createNewFileURL()
         do {
             let file = try AVAudioFile(forWriting: urlPath, settings: recordingSettings, commonFormat: .pcmFormatFloat32, interleaved: true)
+            
+//            let data = try Data(contentsOf: urlPath)
             return file
         } catch let error as NSError {
             print("Error in \(#function): \(error.localizedDescription) /n---/n \(error)")

@@ -57,7 +57,7 @@ class RecordingListViewController: UIViewController {
         do {
             let paths = try fileManager.contentsOfDirectory(at: directory, includingPropertiesForKeys: nil, options: [])
             for path in paths {
-                let recording = Audio(audioRecording: path, fileName: path.lastPathComponent)
+                let recording = Audio(fileName: path.lastPathComponent)
                 self.recordings.append(recording)
             }
             self.listTableView.reloadData()
@@ -144,7 +144,6 @@ extension RecordingListViewController: UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordingCell", for: indexPath)
         let audioFile = recordings[indexPath.row]
         cell.textLabel?.text = audioFile.fileName
-        cell.detailTextLabel?.text = audioFile.audioRecording.absoluteString
         return cell
     }
 
@@ -153,7 +152,8 @@ extension RecordingListViewController: UITableViewDelegate, UITableViewDataSourc
             self.stopPlayingAudio()
         }
         let recording = recordings[indexPath.row]
-        self.startPlayingAudio(audioFile: recording.audioRecording)
+        guard let recordUrl = recording.audioURL else { return }
+        self.startPlayingAudio(audioFile: recordUrl)
     }
 }
 

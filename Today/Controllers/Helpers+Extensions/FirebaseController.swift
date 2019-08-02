@@ -61,8 +61,8 @@ class FirebaseController {
             database.child(type).observe(.childAdded) { (dataSnapshot) in
                 guard let dictionary = dataSnapshot.value as? [String : Any] else { return }
                 foundDictionaries.append(dictionary)
+                completion(foundDictionaries)
             }
-            completion(foundDictionaries)
         }
     }
     
