@@ -10,26 +10,10 @@ import Foundation
 import UIKit
 import AVFoundation
 
-//Notepad Object
-class Notepad{
-    
-    var timeStamp: Date
-    var notes: [Note]
-    var photos: [Photo]
-    var audioFiles: [Audio]
-    
-    //Designated Init
-    init(timeStamp: Date = Date(), notes: [Note] = [], photos: [Photo] = [], audioFiles: [Audio] = []) {
-        self.timeStamp = timeStamp
-        self.notes = notes
-        self.photos = photos
-        self.audioFiles = audioFiles
-    }
-}
-
-//Note Object (of Notepad)
+//Note Object
 class Note {
     var timeStamp: Date
+    var noteTitle: String
     var noteText: String
     
     //Designated Init
@@ -39,7 +23,7 @@ class Note {
     }
 }
 
-//Photo Object (of Notepad)
+//Photo Object
 class Photo {
     var timeStamp: Date
     var photo: UIImage
@@ -51,7 +35,7 @@ class Photo {
     }
 }
 
-//Audio Object (of Notepad)
+//Audio Object
 class Audio {
     var timeStamp: Date
     var audioRecording: URL
@@ -63,4 +47,11 @@ class Audio {
         self.audioRecording = audioRecording
         self.fileName = fileName
     }
+}
+
+struct NoteConstants {
+    static let noteTypeKey = "Note"
+    fileprivate static let timeStampKey = "timeStamp"
+    fileprivate static let titleKey = "noteTitle"
+    fileprivate static let textKey = "noteText"
 }

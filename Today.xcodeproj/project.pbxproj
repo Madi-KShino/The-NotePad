@@ -21,6 +21,8 @@
 		533F5CF022F39F1C00275DCE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533F5CEF22F39F1C00275DCE /* SignInViewController.swift */; };
 		533F5CF522F3B68200275DCE /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533F5CF422F3B68200275DCE /* PhotosViewController.swift */; };
 		533F5CF722F3BDF300275DCE /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533F5CF622F3BDF300275DCE /* PhotoCollectionViewCell.swift */; };
+		533F5CF922F3C89B00275DCE /* PhotoPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533F5CF822F3C89B00275DCE /* PhotoPopupViewController.swift */; };
+		533F5CFD22F3FF5A00275DCE /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533F5CFC22F3FF5A00275DCE /* Locations.swift */; };
 		537B9A1822E6C06E002FF393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B9A1722E6C06E002FF393 /* AppDelegate.swift */; };
 		537B9A1D22E6C06E002FF393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537B9A1B22E6C06E002FF393 /* Main.storyboard */; };
 		537B9A1F22E6C06F002FF393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537B9A1E22E6C06F002FF393 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		533F5CEF22F39F1C00275DCE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		533F5CF422F3B68200275DCE /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		533F5CF622F3BDF300275DCE /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		533F5CF822F3C89B00275DCE /* PhotoPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPopupViewController.swift; sourceTree = "<group>"; };
+		533F5CFC22F3FF5A00275DCE /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		537B9A1422E6C06E002FF393 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537B9A1722E6C06E002FF393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		537B9A1C22E6C06E002FF393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 				533F5CDF22F25FA200275DCE /* PhotoSelectorViewController.swift */,
 				533F5CF422F3B68200275DCE /* PhotosViewController.swift */,
 				533F5CF622F3BDF300275DCE /* PhotoCollectionViewCell.swift */,
+				533F5CF822F3C89B00275DCE /* PhotoPopupViewController.swift */,
 			);
 			path = NotepadViews;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				53E67B6722EA12DE006DA3AF /* User.swift */,
 				53E67B6B22EA133D006DA3AF /* Note.swift */,
 				53E67B7122EA4080006DA3AF /* Hotine.swift */,
+				533F5CFC22F3FF5A00275DCE /* Locations.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,6 +379,8 @@
 				533F5CEA22F34F5500275DCE /* CustomUIExtensions.swift in Sources */,
 				533F5CEC22F395C100275DCE /* CustomSegues.swift in Sources */,
 				53E67B7622EB7734006DA3AF /* FirebaseController.swift in Sources */,
+				533F5CFD22F3FF5A00275DCE /* Locations.swift in Sources */,
+				533F5CF922F3C89B00275DCE /* PhotoPopupViewController.swift in Sources */,
 				530AE23C22EDFB4F000A7B1C /* HotlineTableViewCell.swift in Sources */,
 				533F5CE022F25FA200275DCE /* PhotoSelectorViewController.swift in Sources */,
 				5313C04022F1F0C500BD2039 /* RecordingListViewController.swift in Sources */,

@@ -13,17 +13,17 @@ class LocationsViewController: UIViewController{
 
     //Outlets
     @IBOutlet weak var selectLocationButton: UIButton!
-    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var locationListTableView: UITableView!
     
+    //Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView.delegate = self
         locationListTableView.delegate = self
         locationListTableView.dataSource = self
     }
 }
 
+//Table View Data Source Extension
 extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -34,8 +34,3 @@ extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension LocationsViewController: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        
-    }
-}

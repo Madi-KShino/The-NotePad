@@ -11,7 +11,8 @@ import UIKit
 class PhotoSelectorViewController: UIViewController {
 
     //Properties
-    weak var delegate: PhotoSelectorViewControllerDelegate?
+    weak var delegate: getPhotoDataDelegate?
+    weak var selectDelegate: PhotoSelectorViewControllerDelegate?
     var photos: [Photo] = []
     
     //Outlets
@@ -41,7 +42,7 @@ extension PhotoSelectorViewController: UIImagePickerControllerDelegate, UINaviga
             let newPhoto = Photo(photo: photo)
             photos.append(newPhoto)
             selectedImageView.image = photos.first?.photo
-            delegate?.photoSelectorViewControllerSelected(image: photo)
+            selectDelegate?.photoSelectorViewControllerSelected(image: photo)
             cameraButton.setTitle("", for: .normal)
             if photos.count == 0 {
                 imageCountLabel.isHidden = true
@@ -67,7 +68,7 @@ extension PhotoSelectorViewController: UIImagePickerControllerDelegate, UINaviga
         let initialActionSheet = UIAlertController(title: "Select a Photo", message: nil, preferredStyle: .actionSheet)
         let secondaryActionSheet = UIAlertController(title: "What Would You Like To Do?", message: nil, preferredStyle: .actionSheet)
         
-        //Action Sheet Actions
+        //Action Options
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
             initialActionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (_) in
                 imagePickerController.sourceType = UIImagePickerController.SourceType.photoLibrary
@@ -89,11 +90,12 @@ extension PhotoSelectorViewController: UIImagePickerControllerDelegate, UINaviga
         secondaryActionSheet.addAction(UIAlertAction(title: "Add Photo", style: .default, handler: { (_) in
             self.present(initialActionSheet, animated: true)
         }))
+        //Go to PhotoViewController with Photo CollectionView
         secondaryActionSheet.addAction(UIAlertAction(title: "View Photos", style: .default, handler: { (_) in
-            //SEGUE TO COLLECTION VIEW WITH SELECTED IMAGES
+            let photosViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "photoCollection")
+            self.navigationController?.pushViewController(photosViewController, animated: true)
         }))
         secondaryActionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
         if photos.isEmpty {
             present(initialActionSheet, animated: true)
         } else {
@@ -104,4 +106,8 @@ extension PhotoSelectorViewController: UIImagePickerControllerDelegate, UINaviga
 
 protocol PhotoSelectorViewControllerDelegate: class {
     func photoSelectorViewControllerSelected(image: UIImage)
+}
+
+protocol getPhotoDataDelegate: class {
+    func getPhotos(set: Bool)
 }

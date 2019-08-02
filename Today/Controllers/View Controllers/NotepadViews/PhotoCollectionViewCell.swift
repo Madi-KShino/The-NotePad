@@ -11,13 +11,14 @@ import UIKit
 class PhotoCollectionViewCell: UICollectionViewCell {
     
     //Properties
-    var photo: Photo? {
-        didSet {
-            DispatchQueue.main.async {
-                self.updateViews()
-            }
-        }
-    }
+    var photo: Photo?
+//    {
+//        didSet {
+//            DispatchQueue.main.async {
+//                self.updateViews()
+//            }
+//        }
+//    }
     
     //Outlets
     @IBOutlet weak var photoImageView: UIImageView!
@@ -30,3 +31,4 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         timeStampLabel.text = "\(photo.timeStamp)"
     }
 }
+

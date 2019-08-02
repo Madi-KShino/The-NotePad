@@ -10,7 +10,7 @@ import UIKit
 
 class PhotosViewController: UIViewController {
 
-    //Properties
+    //Landing Pad
     var photos: [Photo]?
     
     //Outlets
@@ -34,14 +34,17 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCollectionViewCell else { return UICollectionViewCell() }
         let photo = photos?[indexPath.row]
         cell.photo = photo
-        cell.updateViews()
-        
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toImagePopUp" {
-            
+            let destination = segue.destination as? PhotoPopupViewController
+            guard let cell = sender as? PhotoCollectionViewCell,
+                let indexPath = photosCollectionView.indexPath(for: cell),
+                let photo = photos?[indexPath.row]
+                else { return }
+            destination?.photo = photo
         }
     }
 }
