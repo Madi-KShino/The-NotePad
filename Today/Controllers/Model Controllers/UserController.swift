@@ -17,14 +17,15 @@ class UserController {
     var currentUser: User?
     
     //Create a User
-    func createNewUser(withEmail email: String, firstName: String) {
-        guard let uuid = FirebaseController.sharedInstance.currentUser?.uid else { return }
+    func createNewUser(withEmail email: String, firstName: String, completion: @escaping (Bool) -> Void) {
+        guard let uuid = FirebaseController.sharedInstance.currentUser?.uid else { completion(false) ; return }
         let newUser = User(email: email, firstName: firstName)
         newUser.uuid = uuid
-        FirebaseController.sharedInstance.saveObjectToDatabase(object: uuid, type: UserConstants.userTypeKey, withDictionary: newUser.dictionary) { (success) in
+        FirebaseController.sharedInstance.saveObjectToDatabase(uuid: uuid, type: UserConstants.userTypeKey, withDictionary: newUser.dictionary) { (success) in
             if success {
                 print("User (with ID: \(uuid)) Successfully Saved")
                 self.currentUser = newUser
+                completion(true)
             }
         }
     }

@@ -15,20 +15,21 @@ class Note {
     var timeStamp: Date
     var noteTitle: String
     var noteText: String
-    var noteUUID: String?
+    var noteUUID: String
     var dictionary: [String : Any] {
         return [
             NoteConstants.timeStampKey : self.timeStamp,
             NoteConstants.titleKey : self.noteTitle,
             NoteConstants.textKey : self.noteText,
-            NoteConstants.uuidKey : self.noteUUID!]
+            NoteConstants.uuidKey : self.noteUUID]
     }
     
     //Designated Init
-    init(timeStamp: Date = Date(), noteTitle: String, noteText: String) {
+    init(timeStamp: Date = Date(), noteTitle: String, noteText: String, noteUUID: String = UUID().uuidString) {
         self.timeStamp = timeStamp
         self.noteTitle = noteTitle
         self.noteText = noteText
+        self.noteUUID = noteUUID
     }
 }
 
@@ -36,27 +37,28 @@ class Note {
 class Audio {
     var timeStamp: Date
     var fileName: String
-    var audioUUID: String?
+    var audioUUID: String
     var audioData: Data?
     var audioURL: URL?
     var dictionary: [String : Any] {
         return [
             AudioConstants.timeStampKey : self.timeStamp,
             AudioConstants.fileNameKey : self.fileName,
-            AudioConstants.uuidKey : self.audioUUID!]
+            AudioConstants.uuidKey : self.audioUUID]
     }
     
     //Designated Init
-    init(timeStamp: Date = Date(), fileName: String) {
+    init(timeStamp: Date = Date(), fileName: String, audioUUID: String = UUID().uuidString) {
         self.timeStamp = timeStamp
         self.fileName = fileName
+        self.audioUUID = audioUUID
     }
 }
 
 //Photo Object
 class Photo {
     var timeStamp: Date
-    var photoUUID: String?
+    var photoUUID: String
     var photoData: Data?
     var photo: UIImage? {
         get {
@@ -70,12 +72,13 @@ class Photo {
     var dictionary: [String : Any] {
         return [
             PhotoConstants.timeStampKey : self.timeStamp,
-            PhotoConstants.uuidKey : self.photoUUID!]
+            PhotoConstants.uuidKey : self.photoUUID]
     }
     
     //Designated Init
-    init(timeStamp: Date = Date(), photo: UIImage) {
+    init(timeStamp: Date = Date(), photo: UIImage, photoUUID: String = UUID().uuidString) {
         self.timeStamp = timeStamp
+        self.photoUUID = photoUUID
         self.photo = photo
     }
 }

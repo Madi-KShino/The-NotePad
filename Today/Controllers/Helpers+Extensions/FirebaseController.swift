@@ -16,6 +16,7 @@ class FirebaseController {
     
     //Current User
     var currentUser = Auth.auth().currentUser
+    var currentUserID: String?
     
     //Reference to Storage
     let storageReference = Storage.storage().reference()
@@ -25,13 +26,15 @@ class FirebaseController {
     
     //Authenticate User
     func authenticateUserWith(email: String, password: String, completion: @escaping (Bool) -> Void) {
+        
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
-                print("Error in \(#function): \(error.localizedDescription) /n---/n \(error)")
+                print("Error in \(#function): \(error.localizedDescription) \n---\n \(error)")
                 completion(false)
                 return
             }
             guard let userID = result?.user.uid else { completion(false); return }
+            self.currentUserID = userID
             self.currentUser = result?.user
             print("User (with ID: \(userID)) Authenticated Successfully")
             completion(true)
@@ -67,13 +70,13 @@ class FirebaseController {
     }
     
     //Create - Save New Object (as a UUID String) to Database
-    func saveObjectToDatabase(object: String, type: String, withDictionary dictionary: [String : Any], completion: @escaping (Bool) -> Void) {
+    func saveObjectToDatabase(uuid: String, type: String, withDictionary dictionary: [String : Any], completion: @escaping (Bool) -> Void) {
         //Url Path for Object to Save
-        let reference = database.child(type).child(object)
+        let reference = database.child(type).child(uuid)
         //Save the Dictionary for the Object
         reference.updateChildValues(dictionary) { (error, reference) in
             if let error = error {
-                print("Error in \(#function): \(error.localizedDescription) /n---/n \(error)")
+                print("Error in \(#function): \(error.localizedDescription) \n---\n \(error)")
                 completion(false)
                 return
             }

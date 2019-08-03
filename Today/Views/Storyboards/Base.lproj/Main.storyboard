@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SBy-dZ-c3Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -101,7 +101,7 @@
                                 <state key="normal" title="Create Account"/>
                                 <connections>
                                     <action selector="createAccountButtonTapped:" destination="VRs-hO-BZl" eventType="touchUpInside" id="ztH-Tp-Pdn"/>
-                                    <segue destination="srd-Pi-3sR" kind="custom" customClass="CustomSegues" customModule="Today" customModuleProvider="target" id="c96-Jd-KA0"/>
+                                    <segue destination="srd-Pi-3sR" kind="custom" identifier="toDetailVC" customClass="CustomSegues" customModule="Today" customModuleProvider="target" id="c96-Jd-KA0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Your Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tX8-cN-nbX">
@@ -123,6 +123,12 @@
                                     <action selector="toggleActionButtonTapped:" destination="VRs-hO-BZl" eventType="touchUpInside" id="hex-6s-XgG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passwords do not match. " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDZ-Eq-0F7">
+                                <rect key="frame" x="83" y="761.5" width="248" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -134,8 +140,11 @@
                             <constraint firstItem="FOi-qC-dz7" firstAttribute="height" secondItem="ZYC-AV-Qo5" secondAttribute="height" multiplier="0.06" id="7Ip-U1-G3N"/>
                             <constraint firstItem="FOi-qC-dz7" firstAttribute="trailing" secondItem="hu8-ay-Kze" secondAttribute="trailing" id="8fd-LU-gur"/>
                             <constraint firstItem="lzD-2s-uBF" firstAttribute="centerY" secondItem="nV7-O1-wdt" secondAttribute="centerY" multiplier="0.9" id="ADU-HY-i2I"/>
+                            <constraint firstItem="uDZ-Eq-0F7" firstAttribute="leading" secondItem="FOi-qC-dz7" secondAttribute="leading" id="CFV-uJ-uKo"/>
+                            <constraint firstItem="uDZ-Eq-0F7" firstAttribute="top" secondItem="FOi-qC-dz7" secondAttribute="bottom" constant="10" id="Eaj-m3-bAJ"/>
                             <constraint firstItem="Bbf-wo-Vq6" firstAttribute="height" secondItem="ZYC-AV-Qo5" secondAttribute="height" multiplier="0.07" id="MxQ-1X-mfF"/>
                             <constraint firstItem="FOi-qC-dz7" firstAttribute="width" secondItem="ZYC-AV-Qo5" secondAttribute="width" multiplier="0.6" id="NvV-Q3-nVY"/>
+                            <constraint firstItem="uDZ-Eq-0F7" firstAttribute="trailing" secondItem="FOi-qC-dz7" secondAttribute="trailing" id="V0U-FW-BCR"/>
                             <constraint firstItem="tX8-cN-nbX" firstAttribute="centerX" secondItem="ZYC-AV-Qo5" secondAttribute="centerX" id="Ym9-TJ-9wY"/>
                             <constraint firstItem="4tc-hi-IM8" firstAttribute="top" secondItem="lzD-2s-uBF" secondAttribute="bottom" constant="10" id="hOc-ns-cbd"/>
                             <constraint firstItem="lzD-2s-uBF" firstAttribute="centerX" secondItem="ZYC-AV-Qo5" secondAttribute="centerX" id="lRe-gd-1kb"/>
@@ -150,6 +159,7 @@
                         <outlet property="createAccountLabel" destination="tX8-cN-nbX" id="qml-Iv-krX"/>
                         <outlet property="emailTextField" destination="Bbf-wo-Vq6" id="2Qg-z7-bdd"/>
                         <outlet property="nameTextField" destination="5C3-c2-8oj" id="1jX-Rf-ihn"/>
+                        <outlet property="passwordErrorLabel" destination="uDZ-Eq-0F7" id="ueE-et-tSl"/>
                         <outlet property="passwordTextField" destination="Sjp-Df-PBZ" id="Ly4-Lf-ykq"/>
                         <outlet property="securityInfoButton" destination="4tc-hi-IM8" id="SXB-gP-E1Q"/>
                         <outlet property="toggleActionButton" destination="lyx-hH-te1" id="jTJ-Fn-pEX"/>
