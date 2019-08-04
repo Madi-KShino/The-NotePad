@@ -50,13 +50,11 @@ class NoteController {
         let uuid = newPhoto.photoUUID
         guard let data = newPhoto.photoData else { return }
         FirebaseController.sharedInstance.uploadImage(type: PhotoConstants.photoTypeKey, uuid: uuid, data: data) { (url) in
-            let uuid = UserController.sharedInstance.currentUser?.uuid
         }
     }
     
     //Fetch Objects
     func fetchNotes(completion: @escaping ([Note]?) -> Void) {
-        
     }
     
     func fetchAudioFiles(completion: @escaping ([Audio]?) -> Void) {

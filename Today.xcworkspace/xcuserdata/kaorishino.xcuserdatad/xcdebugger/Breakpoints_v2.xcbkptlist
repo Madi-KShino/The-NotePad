@@ -20,91 +20,245 @@
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = ""
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = ""
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Today/Controllers/View Controllers/NotepadViews/PhotoCollectionViewCell.swift"
+            timestampString = "586592303.003967"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "PhotoCollectionViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Today.PhotoCollectionViewCell.photo.getter : Swift.Optional&lt;Today.Photo&gt;"
+                  moduleName = "Today"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaorishino/Documents/DEV.MOUNTAIN/CLASS/MY%20APP/Today/Today/Controllers/View%20Controllers/NotepadViews/PhotoCollectionViewCell.swift"
+                  timestampString = "586592303.38309"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Today.PhotoCollectionViewCell.photo.setter : Swift.Optional&lt;Today.Photo&gt;"
+                  moduleName = "Today"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaorishino/Documents/DEV.MOUNTAIN/CLASS/MY%20APP/Today/Today/Controllers/View%20Controllers/NotepadViews/PhotoCollectionViewCell.swift"
+                  timestampString = "586592303.384742"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Today.PhotoCollectionViewCell.photo.modify : Swift.Optional&lt;Today.Photo&gt;"
+                  moduleName = "Today"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaorishino/Documents/DEV.MOUNTAIN/CLASS/MY%20APP/Today/Today/Controllers/View%20Controllers/NotepadViews/PhotoCollectionViewCell.swift"
+                  timestampString = "586592303.386169"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Today.PhotoCollectionViewCell.photo.modify : Swift.Optional&lt;Today.Photo&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Today"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaorishino/Documents/DEV.MOUNTAIN/CLASS/MY%20APP/Today/Today/Controllers/View%20Controllers/NotepadViews/PhotoCollectionViewCell.swift"
+                  timestampString = "586592303.38748"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Today.PhotoCollectionViewCell.init(frame: __C.CGRect) -&gt; Today.PhotoCollectionViewCell"
+                  moduleName = "Today"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaorishino/Documents/DEV.MOUNTAIN/CLASS/MY%20APP/Today/Today/Controllers/View%20Controllers/NotepadViews/PhotoCollectionViewCell.swift"
+                  timestampString = "586592303.3887"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Today.PhotoCollectionViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Today.PhotoCollectionViewCell&gt;"
+                  moduleName = "Today"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaorishino/Documents/DEV.MOUNTAIN/CLASS/MY%20APP/Today/Today/Controllers/View%20Controllers/NotepadViews/PhotoCollectionViewCell.swift"
+                  timestampString = "586592303.389967"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "122">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Today/Controllers/View Controllers/NotepadViews/PhotoPopupViewController.swift"
-            timestampString = "586479829.3431751"
+            timestampString = "586592303.004305"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "photo"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Today.PhotoPopupViewController.photo.modify : Swift.Optional&lt;Today.Photo&gt;"
+                  moduleName = "Today"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaorishino/Documents/DEV.MOUNTAIN/CLASS/MY%20APP/Today/Today/Controllers/View%20Controllers/NotepadViews/PhotoPopupViewController.swift"
+                  timestampString = "586592303.396108"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Today.PhotoPopupViewController.photo.modify : Swift.Optional&lt;Today.Photo&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Today"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaorishino/Documents/DEV.MOUNTAIN/CLASS/MY%20APP/Today/Today/Controllers/View%20Controllers/NotepadViews/PhotoPopupViewController.swift"
+                  timestampString = "586592303.397442"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Today.PhotoPopupViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Today.PhotoPopupViewController"
+                  moduleName = "Today"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaorishino/Documents/DEV.MOUNTAIN/CLASS/MY%20APP/Today/Today/Controllers/View%20Controllers/NotepadViews/PhotoPopupViewController.swift"
+                  timestampString = "586592303.39873"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "199">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Today.PhotoPopupViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Today.PhotoPopupViewController&gt;"
+                  moduleName = "Today"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaorishino/Documents/DEV.MOUNTAIN/CLASS/MY%20APP/Today/Today/Controllers/View%20Controllers/NotepadViews/PhotoPopupViewController.swift"
+                  timestampString = "586592303.3999619"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "107">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Today/Controllers/View Controllers/NotepadViews/PhotoPopupViewController.swift"
+            timestampString = "586592303.004514"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "updateViews()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            symbolName = ""
-            moduleName = "">
-            <Locations>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            symbolName = ""
-            moduleName = "">
-            <Locations>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Today/Controllers/Helpers+Extensions/FirebaseController.swift"
-            timestampString = "586479829.343689"
+            filePath = "Today/Controllers/View Controllers/NotepadViews/PhotosViewController.swift"
+            timestampString = "586592303.004571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "authenticateUserWith(email:password:completion:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Today.FirebaseController.authenticateUserWith(email: Swift.String, password: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "Today"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kaorishino/Documents/DEV.MOUNTAIN/CLASS/MY%20APP/Today/Today/Controllers/Helpers+Extensions/FirebaseController.swift"
-                  timestampString = "586479829.5082411"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "62">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Today.FirebaseController.authenticateUserWith(email: Swift.String, password: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "Today"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kaorishino/Documents/DEV.MOUNTAIN/CLASS/MY%20APP/Today/Today/Controllers/Helpers+Extensions/FirebaseController.swift"
-                  timestampString = "586479829.510851"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "336">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -113,13 +267,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Today/Controllers/Helpers+Extensions/FirebaseController.swift"
-            timestampString = "586479829.343884"
+            filePath = "Today/Controllers/View Controllers/NotepadViews/PhotosViewController.swift"
+            timestampString = "586592303.004831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "authenticateUserWith(email:password:completion:)"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "photoSelectorViewControllerSelected(image:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Today/Controllers/View Controllers/NotepadViews/PhotosViewController.swift"
+            timestampString = "586592303.004887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

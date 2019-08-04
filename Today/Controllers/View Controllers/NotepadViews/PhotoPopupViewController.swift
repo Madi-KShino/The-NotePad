@@ -11,7 +11,11 @@ import UIKit
 class PhotoPopupViewController: UIViewController {
 
     //Landing Pad
-    var photo: Photo?
+    var photo: Photo? {
+        didSet {
+            updateViews()
+        }
+    }
     
     //Outlets
     @IBOutlet weak var photoView: UIImageView!
@@ -19,7 +23,6 @@ class PhotoPopupViewController: UIViewController {
     //Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateViews()
     }
     
     //Helper Function

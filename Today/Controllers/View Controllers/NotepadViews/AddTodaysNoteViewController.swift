@@ -10,24 +10,27 @@ import UIKit
 
 class AddTodaysNoteViewController: UIViewController {
 
+    //Source of Truth
     var photos: [Photo] = []
     var audioFiles: [Audio] = []
     var notes: [Note] = []
     
+    //Outlets
+    @IBOutlet weak var photosButton: UIButton!
+    @IBOutlet weak var audioButton: UIButton!
+    @IBOutlet weak var notesButton: UIButton!
+    
+    //Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateView()
         // Do any additional setup after loading the view.
+        
     }
 
     func updateView() {
-
+        photosButton.imageView?.image = photos.last?.photo
     }
 }
 
-extension AddTodaysNoteViewController: PhotoSelectorViewControllerDelegate {
-    func photoSelectorViewControllerSelected(image: UIImage) {
-        let newImage = Photo(photo: image)
-        //save to Notepad in Firebase
-        photos.append(newImage)
-    }
-}
+
